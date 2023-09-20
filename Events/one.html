@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="one.css">
+</head>
+<body style="background-color: rgb(75, 62, 62);">
+   <h1>chai aur code</h1> 
+   <ul id="images">
+    <li><img src="https://images.pexels.com/photos/18011097/pexels-photo-18011097/free-photo-of-old-jaguar.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="car" alt=""></li>
+
+    <li><img src="https://images.pexels.com/photos/15022109/pexels-photo-15022109/free-photo-of-woman-relaxing-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="gril" alt=""></li>
+    <li><img src="https://images.pexels.com/photos/17937273/pexels-photo-17937273/free-photo-of-smoke-and-blue-light-around-man-head.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="blue" alt=""></li>
+    <li><img src="https://images.pexels.com/photos/12385897/pexels-photo-12385897.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="men" alt=""></li>
+    <li><img src="https://images.pexels.com/photos/18267778/pexels-photo-18267778/free-photo-of-close-up-of-a-mix-of-berries.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="fruits" alt=""></li>
+    <li><img src="https://images.pexels.com/photos/17967575/pexels-photo-17967575/free-photo-of-train-on-a-platform.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" id="train" alt=""></li>
+   <li><a style="color: rgb(68, 179, 142);" id="google" href="https://google.com">google</a></li>
+
+   </ul>
+   <script>
+    // document.getElementById('fruits').onclick = function(){
+    //     alert("fruits clicked")
+    // }
+
+    //type, timestamp,  Preventeddefault
+    // target, toElement, srcElement, currentTarget
+        // clientX, clientY, shiftkey, keycode
+
+    // document.getElementById('images').addEventListener('click', function(e){
+        
+    //     console.log("Click inside the ul");
+    // },false)
+
+    // document.getElementById('blue').addEventListener('click', function(e){
+        
+    //     console.log("blue clicked");
+    //     e.stopPropagation()
+    // },false)
+
+    // document.getElementById("google").addEventListener('click',function(e){
+    //     console.log("google clicked");
+    //     e.preventDefault()
+    //     e.stopPorpagation()
+    // })
+
+    document.querySelector("#images").addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if( e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt  = e.target.parentNode
+            removeIt.remove()
+        }
+        
+      
+    })
+    // removeIt.parentNode.removeChlid(removeIt)
+   </script>
+</body>
+</html>
