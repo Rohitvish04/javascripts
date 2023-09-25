@@ -1,2 +1,2 @@
-# javascripts
+# javascript
 dthej
